@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #fff;
+    line-height: 1.6;
+    background: #222; /* Cor de fundo para contraste */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent; /* Tornar a barra de navegação transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo { 
+    font-size: 25px;
+    color: #ededed;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-list li {
+    margin-left: 35px;
+}
+
+.nav-list a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a:active {
+    color: #00abf0;
+}
+
+/* Estilo do botão hamburger */
+.menu-toggle {
+    display: none; /* Inicialmente escondido */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background: #ededed;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    .nav-list {
+        position: absolute;
+        top: 70px; /* Abaixo da barra de navegação */
+        left: 0;
+        background: rgba(34, 34, 34, 0.9); /* Fundo escuro para os links */
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Inicialmente escondido */
+    }
+
+    .nav-list.active {
+        display: flex; /* Mostrar quando ativo */
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostrar botão hamburger */
+    }
+}
+
+.home {
+    height: 100vh;
+    background: url('Design\ sem\ nome\(1\).png') no-repeat center center/cover; /* Ajuste no caminho da imagem */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 39px;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 14px;
+}
+
+
+
+footer {
+    position: relative; /* Para poder usar z-index, se necessário */
+    padding: 20px 10%; /* Ajuste o espaçamento conforme necessário */
+    background: transparent; /* Torna o fundo do rodapé transparente */
+    color: #fff; /* Cor do texto */
+    z-index: 10; /* Certifique-se de que o rodapé está acima de outros elementos, se necessário */
+}
+
+.footer-container {
+    display: flex; /* Para alinhar os itens no rodapé */
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+.footer-left, .footer-contact {
+    flex: 0,5; /* Permite que os itens ocupem o mesmo espaço */
+}
+
+.footer-left h3, .footer-contact h4 {
+    margin-bottom: 10px; /* Espaçamento entre o título e o texto */
+}
+
+.footer-left p, .footer-contact p {
+    margin: 0; /* Remove margens padrões */
+}
+
+.footer a {
+    color: #00abf0; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    transition: color 0.3s; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+.footer a:hover {
+    color: #ffffff; /* Muda a cor do link ao passar o mouse */
+}
+
